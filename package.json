@@ -1,5 +1,5 @@
 { "name": "bases"
-, "version": "0.0.0"
+, "version": "0.1.0"
 , "description": "Utility for converting numbers to different bases/alphabets."
 , "author": "Aseem Kishore <aseem.kishore@gmail.com>"
 , "homepage": "https://github.com/aseemk/bases.js"
