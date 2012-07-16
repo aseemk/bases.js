@@ -1,5 +1,5 @@
 // bases.js
-// Helpers to convert numbers between different bases.
+// Utility for converting numbers to different bases/alphabets.
 //
 // Usage:
 // bases = require('./bases');
