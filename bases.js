@@ -36,8 +36,8 @@ bases.LETTERS_LOWERCASE = 'abcdefghijklmnopqrstuvwxyz';
 bases.LETTERS_UPPERCASE = bases.LETTERS_LOWERCASE.toUpperCase();
 bases.KNOWN_ALPHABETS = {};
 
-// Each of the number ones:
-for (var i = 1; i <= 10; i++) {
+// Each of the number ones, starting from base-2 (base-1 doesn't make sense?):
+for (var i = 2; i <= 10; i++) {
     bases.KNOWN_ALPHABETS[i] = bases.NUMERALS.substr(0, i);
 }
 
