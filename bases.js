@@ -91,3 +91,8 @@ for (var base in bases.KNOWN_ALPHABETS) {
         makeAlias(base, bases.KNOWN_ALPHABETS[base]);
     }
 }
+
+// And a generic alias too:
+bases.toBase = function (num, base) {
+    return bases.toAlphabet(num, bases.KNOWN_ALPHABETS[base]);
+};
