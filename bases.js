@@ -79,11 +79,11 @@ bases.KNOWN_ALPHABETS[58] = bases.KNOWN_ALPHABETS[62].replace(/[0OlI]/g, '');
 bases.KNOWN_ALPHABETS[32] = bases.NUMERALS + bases.LETTERS_UPPERCASE.replace(/[ILOU]/g, '');
 
 // Closure helper for convenience aliases like bases.toBase36():
-makeAlias = function (base, alphabet) {
+function makeAlias (base, alphabet) {
     bases['toBase' + base] = function (num) {
         return bases.toAlphabet(num, alphabet);
     };
-};
+}
 
 // Do this for all known alphabets:
 for (var base in bases.KNOWN_ALPHABETS) {
