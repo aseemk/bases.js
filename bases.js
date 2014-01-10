@@ -99,6 +99,9 @@ function makeAlias (base, alphabet) {
     bases['toBase' + base] = function (num) {
         return bases.toAlphabet(num, alphabet);
     };
+    bases['fromBase' + base] = function (str) {
+        return bases.fromAlphabet(str, alphabet);
+    };
 }
 
 // Do this for all known alphabets:
