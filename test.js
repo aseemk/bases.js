@@ -118,10 +118,11 @@ var DATA =
 // go through and test all of the above data:
 for (var base in DATA) {
     var data = DATA[base];
-    for (var i = 0; i < data; i++) {
+    for (var i = 0; i < data.length; i++) {
         var num = data[i][0];
         var exp = data[i][1];
         assert.equal(bases.toBase(num, base), exp);
+        assert.equal(bases.fromBase(exp, base), num);
     }
 }
 
