@@ -22,6 +22,10 @@ var bases = require('./bases');
 bases.toBase16(200);                // => 'c8'
 bases.toBase62(99999);              // => 'q0T'
 bases.toAlphabet(300, 'aAbBcC');    // => 'Abba'
+
+bases.fromBase16('c8');               // => 200
+bases.fromBase62('q0T');              // => 99999
+bases.fromAlphabet('Abba', 'aAbBcC'); // => 300
 ```
 
 ## API
@@ -34,6 +38,14 @@ bases.toAlphabet(300, 'aAbBcC');    // => 'Abba'
 
 - `toBaseX(num)`: convenience helpers for known bases (see below), e.g.
   `toBase62(num)`.
+
+
+- `fromAlphabet(str, alphabet)`: returns an integer representation of the given
+  string for the given alphabet.
+
+- `fromBase(num, base)`: convenience helper for known bases.
+
+- `fromBaseX(str)`: convenience helpers for known bases.
 
 ## Known Bases/Alphabets
 
@@ -56,7 +68,7 @@ bases.toAlphabet(300, 'aAbBcC');    // => 'Abba'
   (`ABC...XYZabc...xyz012...789+/`). Besides there being many different
   standards, padding isn't currently added and line lengths aren't tracked.
   Not recommended for use with APIs that expect formal base-64 strings!
-  
+
 ## License
 
 [MIT license](http://aseemk.mit-license.org/). (c) 2012 Aseem Kishore.
