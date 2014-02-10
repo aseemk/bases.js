@@ -59,25 +59,84 @@ Going from strings to numbers:
 
 ## Known Bases/Alphabets
 
-- Numbers: **base-2** (`01`) through **base-10** (`0123456789`).
+Numbers only:
 
-- Letters: **base-26** (`abcdefghijklmnopqrstuvwxyz`, notice lowercase only)
-  and **base-52** (adds uppercase, i.e. `abc...xyzABC...XYZ`).
+<table>
+<tr>
+<td><strong>Base-2</strong></td>
+<td><code>01</code></td>
+</tr>
+<tr>
+<td><strong>...</strong></td>
+<td><code>012...</code></td>
+</tr>
+<tr>
+<td><strong>Base-10</strong></td>
+<td><code>0123456789</code></td>
+</tr>
+</table>
 
-- Numbers and letters: base-11 (base-10 + `a`) through **base-16**
-  (base-10 + `abcdef`), **base-36** (base-10 + base-26) and **base-62**
-  (base-10 + base-52).
+Letters only:
 
-- Human-friendly: **base-32** as specified by
-  [Douglas Crockford](http://www.crockford.com/wrmg/base32.html) (base-10 +
-  uppercase base-26 - `IOLU`) and **base-58** as specified
-  by [Flickr](http://www.flickr.com/groups/api/discuss/72157616713786392/)
-  (base-62 - `0lIO`).
+<table>
+<tr>
+<td><strong>Base-26</strong></td>
+<td><code>abcdefghijklmnopqrstuvwxyz</code></td>
+</tr>
+<tr>
+<td><strong>Base-52</strong></td>
+<td><code>abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</code></td>
+</tr>
+</table>
 
-- **Base-64** <del>[as standardized](http://en.wikipedia.org/wiki/Base64)</del>
-  (`ABC...XYZabc...xyz012...789+/`). Besides there being many different
-  standards, padding isn't currently added and line lengths aren't tracked.
-  Not recommended for use with APIs that expect formal base-64 strings!
+Alphanumeric:
+
+<table>
+<tr>
+<td><strong>Base-11</strong></td>
+<td><code>0123456789a</code></td>
+</tr>
+<tr>
+<td><strong>...</strong></td>
+<td><code>0123456789ab...</code></td>
+</tr>
+<tr>
+<td><strong>Base-16</strong></td>
+<td><code>0123456789abcdef</code></td>
+</tr>
+<tr>
+<td><strong>Base-36</strong></td>
+<td><code>0123456789abcdefghijklmnopqrstuvwxyz</code></td>
+</tr>
+<tr>
+<td><strong>Base-62</strong></td>
+<td><code>0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</code></td>
+</tr>
+</table>
+
+Human-friendly:
+
+<table>
+<tr>
+<td><strong>Base-32</strong> (<a href="http://www.crockford.com/wrmg/base32.html" target="_blank">from Douglas Crockford</a>)</td>
+<td><code>0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ</code> (no <code>IOLU</code>)</td>
+</tr>
+<tr>
+<td><strong>Base-58</strong> (<a href="http://www.flickr.com/groups/api/discuss/72157616713786392/" target="_blank">from Flickr</a>)</td>
+<td><code>123456789abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ</code> (no <code>0lIO</code>)</td>
+</tr>
+</table>
+
+Other:
+
+<table>
+<tr>
+<td><strong>Base-64</strong> (<a href="http://en.wikipedia.org/wiki/Base64" target="_blank">as standardized</a>)</td>
+<td><code>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/</code></td>
+</tr>
+</table>
+
+Base-64 warning: besides there being several different standards, padding isn't currently added and line lengths aren't tracked. Not recommended for use with APIs that expect formal base-64 strings!
 
 ## License
 
