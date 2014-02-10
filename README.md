@@ -119,7 +119,7 @@ Human-friendly:
 <table>
 <tr>
 <td><strong>Base-32</strong> (<a href="http://www.crockford.com/wrmg/base32.html" target="_blank">from Douglas Crockford</a>)</td>
-<td><code>0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ</code> (no <code>IOLU</code>)</td>
+<td><code>0123456789ABCDEFGHJKMNPQRSTVWXYZ</code> (no <code>IOLU</code>)</td>
 </tr>
 <tr>
 <td><strong>Base-58</strong> (<a href="http://www.flickr.com/groups/api/discuss/72157616713786392/" target="_blank">from Flickr</a>)</td>
