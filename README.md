@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/aseemk/bases.js.png?branch=master)](https://travis-ci.org/aseemk/bases.js)
+
 # bases.js
 
 Utility for converting numbers to different bases/alphabets. Common bases have
