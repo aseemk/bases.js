@@ -2,13 +2,9 @@
 
 # bases.js
 
-Utility for converting numbers to different bases/alphabets. Common bases have
-convenience aliases (see below), but arbitrary/custom alphabets can be used.
-
-
-E.g. base-2 uses an alphabet of `01`, base-16 `0123456789abcdef` (notice the
-letters are lowercase), base-36 continues to `z`, base-62 adds the uppercase
-letters
+Utility for converting numbers to/from different bases/alphabets.
+Common bases have convenience aliases (see below), but arbitrary/custom
+alphabets can be used.
 
 ## Installation
 
@@ -32,6 +28,8 @@ bases.fromAlphabet('Abba', 'aAbBcC'); // => 300
 
 ## API
 
+Going from numbers to strings:
+
 - `toAlphabet(num, alphabet)`: returns a string representation of the given
   number for the given alphabet, where the alphabet is an arbitrary string of
   characters. (See known alphabets below for examples.)
@@ -41,6 +39,7 @@ bases.fromAlphabet('Abba', 'aAbBcC'); // => 300
 - `toBaseX(num)`: convenience helpers for known bases (see below), e.g.
   `toBase62(num)`.
 
+Going from strings to numbers:
 
 - `fromAlphabet(str, alphabet)`: returns an integer representation of the given
   string for the given alphabet.
@@ -73,5 +72,5 @@ bases.fromAlphabet('Abba', 'aAbBcC'); // => 300
 
 ## License
 
-[MIT license](http://aseemk.mit-license.org/). (c) 2012 Aseem Kishore.
-
+[MIT license](http://aseemk.mit-license.org/). (c) 2012-2014 Aseem Kishore
+and [contributors](https://github.com/aseemk/bases.js/graphs/contributors).

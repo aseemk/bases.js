@@ -1,14 +1,6 @@
 // bases.js
-// Utility for converting numbers to different bases/alphabets.
-//
-// Usage:
-// bases = require('./bases');
-// bases.toBase16(200);                // => 'c8'
-// bases.toBase62(99999);              // => 'q0T'
-// bases.toAlphabet(300, 'aAbBcC');    // => 'Abba'
-//
-// (c) 2012 Aseem Kishore. MIT license:
-// http://aseemk.mit-license.org/
+// Utility for converting numbers to/from different bases/alphabets.
+// See README.md for details.
 
 var bases = (typeof exports !== 'undefined' ? exports : (window.Bases = {}));
 

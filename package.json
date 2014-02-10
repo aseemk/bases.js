@@ -1,6 +1,6 @@
 { "name": "bases"
 , "version": "0.1.1"
-, "description": "Utility for converting numbers to different bases/alphabets."
+, "description": "Utility for converting numbers to/from different bases/alphabets."
 , "author": "Aseem Kishore <aseem.kishore@gmail.com>"
 , "homepage": "https://github.com/aseemk/bases.js"
 , "keywords": ["alphabet", "base", "base-36", "base-58", "base-62"]
