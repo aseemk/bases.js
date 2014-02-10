@@ -8,14 +8,23 @@ alphabets can be used.
 
 ## Installation
 
+On the server side w/ Node.js:
+
 ```
 npm install bases
+```
+
+Or in the browser (adds a global `Bases` variable for now):
+
+```html
+<script src="bases.js"></script>
 ```
 
 ## Usage
 
 ```js
 var bases = require('./bases');
+  // or window.Bases in the browser
 
 bases.toBase16(200);                // => 'c8'
 bases.toBase62(99999);              // => 'q0T'
