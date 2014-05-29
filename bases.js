@@ -25,13 +25,14 @@ bases.toAlphabet = function (num, alphabet) {
 // Returns an integer representation of the given string for the given alphabet:
 bases.fromAlphabet = function (str, alphabet) {
     var base = alphabet.length;
-    var num = pos = 0;
+    var pos = 0;
+    var num = 0;
     var c;
 
     while (str.length) {
         c = str[str.length - 1];
         str = str.substr(0, str.length - 1);
-        num += Math.pow(base, pos) * alphabet.indexOf(c)
+        num += Math.pow(base, pos) * alphabet.indexOf(c);
         pos++;
     }
 
