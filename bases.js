@@ -24,6 +24,7 @@ bases.toAlphabet = function (num, alphabet) {
 
 // Returns an integer representation of the given string for the given alphabet:
 bases.fromAlphabet = function (str, alphabet) {
+	str = str.toString();//fix #9 (https://github.com/aseemk/bases.js/issues/9)
     var base = alphabet.length;
     var pos = 0;
     var num = 0;
