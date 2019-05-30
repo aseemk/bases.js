@@ -126,5 +126,13 @@ for (var base in DATA) {
     }
 }
 
+const maxMd5Hash = 'ffffffffffffffffffffffffffffffff';
+const number = bases.fromBase(maxMd5Hash, 16);
+const compacted = bases.toBase(number, 62);
+console.log(compacted);
+const backNumber = bases.fromBase(compacted, 62);
+const backHash = bases.toBase(backNumber, 16);
+assert.equal(backHash, maxMd5Hash);
+
 // finally...
 console.log('All tests passed.');

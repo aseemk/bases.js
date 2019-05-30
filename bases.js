@@ -3,16 +3,19 @@
 // See README.md for details.
 
 var bases = (typeof exports !== 'undefined' ? exports : (window.Bases = {}));
+const Big = require('big.js');
 
 // Returns a string representation of the given number for the given alphabet:
 bases.toAlphabet = function (num, alphabet) {
     var base = alphabet.length;
     var digits = [];    // these will be in reverse order since arrays are stacks
+    num = Big(num);
 
     // execute at least once, even if num is 0, since we should return the '0':
     do {
-        digits.push(num % base);    // TODO handle negatives properly?
-        num = Math.floor(num / base);
+        digits.push(num.mod(base));    // TODO handle negatives properly?
+        num = num.div(base);
+        num = new Big(num).round(0, 0);
     } while (num > 0);
 
     var chars = [];
@@ -24,15 +27,15 @@ bases.toAlphabet = function (num, alphabet) {
 
 // Returns an integer representation of the given string for the given alphabet:
 bases.fromAlphabet = function (str, alphabet) {
-    var base = alphabet.length;
+    var base = new Big(alphabet.length);
     var pos = 0;
-    var num = 0;
+    var num = new Big(0);
     var c;
 
     while (str.length) {
         c = str[str.length - 1];
         str = str.substr(0, str.length - 1);
-        num += Math.pow(base, pos) * alphabet.indexOf(c);
+        num = num.plus(base.pow(pos).times(alphabet.indexOf(c)));
         pos++;
     }
 
